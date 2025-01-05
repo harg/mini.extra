@@ -1884,6 +1884,7 @@ H.lsp_make_on_list = function(source, opts)
   return function(data)
     local items = data.items
     for _, item in ipairs(data.items) do
+      vim.inspect(item.path)
       item.text, item.path = item.text or '', item.filename or nil
     end
     items = process(items)
